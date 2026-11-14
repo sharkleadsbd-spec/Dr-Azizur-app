@@ -31,6 +31,9 @@ jobs:
       - name: Create Android project
         run: flutter create . --platforms=android
 
+      - name: Apply Android manifest
+        run: cp android_manifest_template.xml android/app/src/main/AndroidManifest.xml
+
       - name: Get dependencies
         run: flutter pub get
 
